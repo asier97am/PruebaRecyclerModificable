@@ -9,7 +9,7 @@ import java.util.List;
 public class MyApplication extends Application {
 
     private static List<President> presidentList = new ArrayList<President>();
-    private static int nextId=10;
+    private static int nextId=getNextId();
 
     public MyApplication() {
         fillPresidentList();
