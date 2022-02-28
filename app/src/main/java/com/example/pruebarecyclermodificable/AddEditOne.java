@@ -39,9 +39,10 @@ public class AddEditOne extends AppCompatActivity {
 
                 // create president
                 int nextId = myApplication.getNextId();
-                President newPresident = new President(nextId,etName.getText().toString(),Integer.getInteger(etDate.getText().toString()),etImagen.getText().toString());
+                President newPresident = new President(nextId,etName.getText().toString(),Integer.parseInt(etDate.getText().toString()),etImagen.getText().toString());
                 //add the object to the global list of presidents
-
+                presidentList.add(newPresident);
+                myApplication.setNextId(nextId++);
                 //go back...
 
                 Intent intent = new Intent(AddEditOne.this, MainActivity.class);
